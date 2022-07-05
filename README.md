@@ -42,7 +42,7 @@ yarn && yarn build
 cp -r ./dist/* <ROOT_OF_WEB_SERVER>
 ```
 
-# Enable LCD for Ping.pub (do this on the config for your chain)
+# Enable LCD for Ping.pub (do this in config.toml for your chain)
 
 1. Set `enable = true` in `./config/app.toml`
 ```
@@ -65,7 +65,7 @@ address = "tcp://0.0.0.0:1317"
 max-open-connections = 1000
 ```
 
-2. add proxy server and enable CORS. NOTE: You must enable https as well.
+2. Add proxy server and enable CORS. NOTE: You must enable https as well.
 
 ```
 server {
@@ -81,7 +81,7 @@ server {
     }
 }
 ```
-3. config your blockchain in [./src/chains]()
+3. Configure your blockchain in [./src/chains](). Ensure the api and rpc settings are public-facing endpoints, as these are referenced by the explorer directly in the browser client. 
 
 
 
